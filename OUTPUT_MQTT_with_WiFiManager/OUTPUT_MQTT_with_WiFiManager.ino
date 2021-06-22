@@ -270,6 +270,7 @@ void setup() {
 //  client.setServer(mqtt_server, 12025);
   const uint16_t mqtt_port_x = 1883; 
   client.setServer(mqtt_server, mqtt_port_x);
+  client.setCallback(callback);
     watchdogSetup();
 }
 
@@ -283,7 +284,7 @@ void reconnect() {
     // if (client.connect("ESP8266Client")) {
     if (client.connect(CL, mqtt_user, mqtt_pass)) {
       Serial.println("connected");
-       client.subscribe(sub_topic); //mengambil data dari antrian received
+       client.subscribe("Aktuator"); //mengambil data dari antrian received
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
