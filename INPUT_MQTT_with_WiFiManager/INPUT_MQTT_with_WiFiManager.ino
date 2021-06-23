@@ -22,7 +22,7 @@ bool shouldSaveConfig = false;
 #define mqtt_port         "1883"
 #define mqtt_user         "/smarthome:smarthome"
 #define mqtt_pass         "Ssm4rt2!"
-#define pub_topic         "Log"
+#define pub_topic         "Sensor"
 const char* CL = "LSKK-HA-";//nama alat
 String guid = "2326a3c2-6bea-4722-aba9-698478d450c9";
 int loop_count  = 0 ; //loop count loop
